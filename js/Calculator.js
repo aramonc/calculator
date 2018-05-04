@@ -44,14 +44,6 @@ export default class Calculator extends EventEmitter{
     }
   }
 
-  listenForOperands(operand) {
-    this.appendOperandValue(operand);
-  }
-
-  listenForOperators(operator) {
-    this.setOperation(operator);
-  }
-
   clear() {
     this.operands = [''];
     this.operators = [];
