@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Basic Calculator</title>
+    <style>
+        .js-operand, .js-operator {
+            width: 100%;
+        }
+        #display {
+            text-align: right;
+        }
+    </style>
+</head>
+<body>
+<table width="400" border="1">
+    <tr>
+        <td id="display" colspan="3" width="90%">0</td>
+        <td width="10%">
+            <button class="js-operator" value="clr">CLR</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="js-operand" value="7">7</button>
+        </td>
+        <td>
+            <button class="js-operand" value="8">8</button>
+        </td>
+        <td>
+            <button class="js-operand" value="9">9</button>
+        </td>
+        <td>
+            <button class="js-operator" value="div">/</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="js-operand" value="4">4</button>
+        </td>
+        <td>
+            <button class="js-operand" value="5">5</button>
+        </td>
+        <td>
+            <button class="js-operand" value="6">6</button>
+        </td>
+        <td>
+            <button class="js-operator" value="mult">*</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="js-operand" value="1">1</button>
+        </td>
+        <td>
+            <button class="js-operand" value="2">2</button>
+        </td>
+        <td>
+            <button class="js-operand" value="3">3</button>
+        </td>
+        <td>
+            <button class="js-operator" value="sub">-</button>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            <button class="js-operand" value=".">.</button>
+        </td>
+        <td>
+            <button class="js-operand" value="0">0</button>
+        </td>
+        <td>
+            <button class="js-operator" value="eq">=</button>
+        </td>
+        <td>
+            <button class="js-operator" value="add">+</button>
+        </td>
+    </tr>
+</table>
+
+<script src="node_modules/event-emitter-es6/dist/event-emitter.min.js" rel="script" type="module"></script>
+<script src="js/init.js" rel="script" type="module"></script>
+</body>
+</html>
