@@ -1,0 +1,15 @@
+{
+  "name": "calculator",
+  "version": "1.0.0",
+  "description": "Simple four function calculator",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/aramonc/calculator"
+  },
+  "author": "Adrian Cardenas",
+  "license": "MIT",
+  "dependencies": {
+    "event-emitter-es6": "^1.1.5"
+  }
+}
