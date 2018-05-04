@@ -1,9 +1,14 @@
-export default class Calculator {
+export default class Calculator extends EventEmitter{
 
   constructor () {
+    super();
     this.operands = [''];
     this.operators = [];
   };
+
+  get operand() {
+    return this.operands[this.operands.length - 1];
+  }
 
   finalizeOperand() {
     const currentOperandLoc = this.operands.length - 1;
@@ -17,13 +22,23 @@ export default class Calculator {
   }
 
   setOperation(operation) {
+
+    if (operation === 'clr') {
+      this.clear();
+      this.emit('result', 0);
+      return;
+    }
+
+    if (this.operands[this.operands - 1] === '') {
+      this.operators.pop();
+    }
+
     // first finalize the current operand and add a new one
     this.finalizeOperand();
 
     if (operation === 'eq') {
-      console.log(this.calculate());
-      this.operands = [''];
-      this.operators = [];
+      this.emit('result', this.calculate());
+      this.clear();
     } else {
       this.operators.push(operation);
     }
@@ -35,6 +50,11 @@ export default class Calculator {
 
   listenForOperators(operator) {
     this.setOperation(operator);
+  }
+
+  clear() {
+    this.operands = [''];
+    this.operators = [];
   }
 
   calculate() {
