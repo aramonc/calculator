@@ -1,0 +1,12 @@
+#calculator > table {
+    width: 400px;
+    table-layout: fixed;
+}
+
+#calculator > td {
+    width: 97px;
+}
+
+#calculator > table, th, td {
+    border: 1px solid black;
+}
